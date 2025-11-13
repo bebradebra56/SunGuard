@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798139242816",
+    "project_id": "sunguard-71eb5",
+    "storage_bucket": "sunguard-71eb5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798139242816:android:bc123b18c964de6b1f82a5",
+        "android_client_info": {
+          "package_name": "com.sunguard.vault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvHQZXEBCejmY9W2uZXbnuFvWNoxX4QR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
