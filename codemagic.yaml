@@ -3,7 +3,7 @@ workflows:
     name: Android release workflow
     environment:
       android_signing:
-        - egupt_guard_keystore
+        - egypt_guard_keystore
       vars:
         PACKAGE_NAME: "com.sunguard.vault"
     scripts:
