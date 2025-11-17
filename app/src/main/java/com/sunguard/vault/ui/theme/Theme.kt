@@ -78,6 +78,23 @@ fun SunGuardTheme(
     val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
     
     // Status bar and navigation bar colors are handled by enableEdgeToEdge()
+
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as Activity).window
+
+            // Всегда чёрные системные бары
+            window.statusBarColor = Color.Black.toArgb()
+            window.navigationBarColor = Color.Black.toArgb()
+
+            val controller = WindowCompat.getInsetsController(window, view)
+
+            // Всегда белые иконки и текст
+            controller.isAppearanceLightStatusBars = false
+            controller.isAppearanceLightNavigationBars = false
+        }
+    }
     
     MaterialTheme(
         colorScheme = colorScheme,

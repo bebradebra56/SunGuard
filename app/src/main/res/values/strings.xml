@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SunGuard</string>
+    <string name="app_name">Egypt Guard</string>
 
     <!-- Common -->
     <string name="app_tagline">Vault of Secrets Protected by Anubis</string>

@@ -6,15 +6,16 @@
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <View
+    <ImageView
         android:id="@+id/sunGuardBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sun_guard_back" />
 
 
     <androidx.constraintlayout.widget.Group
@@ -30,51 +31,42 @@
         android:visibility="gone"
         app:constraint_referenced_ids="sunGuardConnectionState" />
 
-    <TextView
+    <ImageView
         android:id="@+id/sunGuardProgressText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/abeezee"
-        android:shadowColor="@color/black"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="10"
-        android:text="Loading..."
-        android:textColor="@color/black"
-        android:textSize="30sp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/sunGuardProgress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sun_guard_load" />
 
     <ProgressBar
         android:id="@+id/sunGuardProgress"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:indeterminateTint="@color/black"
+        android:indeterminateTint="@color/gold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47000003" />
+        app:layout_constraintVertical_bias="0.8" />
 
 
-    <TextView
+    <ImageView
         android:id="@+id/sunGuardConnectionState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/abeezee"
-        android:shadowColor="@color/black"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="10"
-        android:text="No internet connection"
-        android:textColor="@color/black"
-        android:textSize="30sp"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/sun_guard_state" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/sunGuardNotiGroup"
@@ -92,16 +84,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/sun_guard_land_back" />
 
     <TextView
         android:id="@+id/sunGuardNotifText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="11dp"
-        android:fontFamily="@font/abeezee"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/bakbak_one"
         android:gravity="center"
         android:shadowColor="@color/black"
         android:shadowDx="2"
@@ -119,12 +111,12 @@
     <Button
         android:id="@+id/sunGuardGrandButton"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/ic_launcher_background"
-        android:fontFamily="@font/abeezee"
+        android:layout_height="70dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/sun_guard_btn"
+        android:fontFamily="@font/bakbak_one"
         android:shadowColor="@color/black"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -139,11 +131,12 @@
         android:id="@+id/sunGuardSkipButton"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/bakbak_one"
         android:gravity="center"
         android:shadowColor="@color/black"
         android:shadowDx="2"
         android:shadowDy="2"
-        android:fontFamily="@font/abeezee"
         android:shadowRadius="5"
         android:text="Skip"
         android:textColor="@color/white"
@@ -156,10 +149,10 @@
         android:id="@+id/sunGuardNotifText2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="9dp"
-        android:fontFamily="@font/abeezee"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bakbak_one"
         android:gravity="center"
         android:letterSpacing="0"
         android:shadowColor="@color/black"

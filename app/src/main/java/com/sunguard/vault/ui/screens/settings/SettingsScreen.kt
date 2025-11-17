@@ -150,11 +150,10 @@ fun SettingsScreen(
                 
                 // About Section
                 SettingsSection(title = "About") {
-                    SettingItem(
+                    SettingItemVersion(
                         icon = Icons.Default.Info,
                         title = "Version",
                         subtitle = "1.0.0",
-                        onClick = { }
                     )
                     
                     GoldenDivider()
@@ -315,6 +314,44 @@ fun SettingsSection(
         
         EgyptianCard {
             content()
+        }
+    }
+}
+
+@Composable
+fun SettingItemVersion(
+    icon: ImageVector,
+    title: String,
+    subtitle: String,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            tint = Gold,
+            modifier = Modifier.size(24.dp)
+        )
+
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            Text(
+                text = title,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            Text(
+                text = subtitle,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+            )
         }
     }
 }
